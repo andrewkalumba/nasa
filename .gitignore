@@ -24,3 +24,4 @@ API_ENDPOINT
 *.njsproj
 *.sln
 *.sw?
+.env

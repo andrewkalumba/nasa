@@ -29,7 +29,7 @@ const StyledPageTitle = styled.h3`
 font-size: 1.5rem;
 `
 
-export const StyledButton = styled.button <{$Weight:number}>`
+export const StyledButton = styled.button <{ $Weight: number }>`
 background-color: #1a1a1a;
 color: #F7F7F2;
 border-radius: 8px;
@@ -56,7 +56,8 @@ const DaysPicture = () => {
         Navigate(-1)
     }
 
-    const API_ENDPOINT = "https://api.nasa.gov/planetary/apod?api_key=dxHeTaPx8okUAT8JAhAWLl9y39k2FPhN9BFQxNms"
+    const API_KEY = import.meta.env.VITE_NASA_API_KEY;
+    const API_ENDPOINT = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
 
     const FetchAPI = async () => {
         try {

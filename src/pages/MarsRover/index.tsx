@@ -51,8 +51,9 @@ padding: 16px;
 const MarsRover = () => {
   const [photoData, setphotoData] = useState<NASA | null>(null)
 
-  const API_ENDPOINT = ('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=dxHeTaPx8okUAT8JAhAWLl9y39k2FPhN9BFQxNms')
-
+  const API_KEY = import.meta.env.VITE_NASA_API_KEY;
+  const API_ENDPOINT = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${API_KEY}`;
+  
   const FetchAPI = async () => {
     try {
       let response = await fetch(API_ENDPOINT);
