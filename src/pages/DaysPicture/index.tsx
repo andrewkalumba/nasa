@@ -53,7 +53,7 @@ const DaysPicture = () => {
     const Navigate = useNavigate()
 
     const handleClick = () => {
-        Navigate(-1)
+        Navigate("/")
     }
 
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
